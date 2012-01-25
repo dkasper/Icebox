@@ -1,7 +1,5 @@
 def quicksort(l)
-  if l.length <= 1
-    return l
-  end
+  return l if l.length <= 1
   pivot = l.pop
   less,greater = l.partition { |v| v < pivot}
   quicksort(less) + [pivot] + quicksort(greater)
